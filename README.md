@@ -6,7 +6,7 @@ stored in the binary file `EZP20xx.Dat` (for example, `EZP2023+.Dat`, `EZP2019.D
 This program takes the information about the SERIAL NOR FLASH chips from this file 
 and prints it in the SNANDer format:
 
-`{"Chip Name", Manufacture id, Chip ID, Block Sisz, Number of blocks, 4bit operations enable}`
+`{"Chip Name", Manufacture id, Chip ID, Block Sise, Number of blocks, 4bit operations enable}`
 
 You can print in the terminal `./ezp_parser <Dat file name>` and copy some needed lines with chip data into the file `spi_nor_flash.c` in SNANDer project.
 in the SNANDer project.
