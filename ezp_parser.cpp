@@ -13,6 +13,7 @@ int main(int argc, char* argv[])
  char icType[0x10] = "";
  char icManuf[0x10] = "";
  char icName[0x10] = "";
+ char oldIcManuf[0x10] = "";
  int i, j;
  if (!file)
  {
@@ -20,8 +21,9 @@ int main(int argc, char* argv[])
    return 0;
  }	
  //{ "W25Q64BV",		0xef, 0x40170000, 64 * 1024, 128,  0, 2.70, 3.60 },
- cout << "ic_type  ManuFacture ic_name	man_code  id_code  block_size  blocks 4bit" << endl;
- cout << "===========================================================================" << endl;
+ printf ("=================================================================\n");
+ printf (" ic_name	  man_code   id_code    block_size   blocks 4bit\n");
+ printf ("=================================================================\n");
  i = 0;
  while (!file.eof())
  {
@@ -84,10 +86,18 @@ int main(int argc, char* argv[])
 	  i = 0;
 	  if (strcmp (icType, "SPI_FLASH") == 0)
 	  {
-	     printf ("%s %s { \"%s\", ", icType, icManuf, icName);
+		 if (strcmp (icManuf, oldIcManuf) != 0) printf ("// %s %s \n", icType, icManuf); 
+	     printf (" { \"%s\", ", icName);
 	     printf("		0x%hhx, 0x%hhx%hhx0000, 64 * %d, %d", man_code, id_code, cap_code, (block_size * 1024), blocks );
          if (blocks < 512) printf(", 0 },\n");
          else printf(", 1 },\n");
+         
+         for (j=0; j<0x10; j++)
+	     {
+		    oldIcManuf[j] = icManuf[j];
+	     }
+         
+         //strcpy(oldIcManuf, icManuf);
       }
  }	   	  
 
@@ -96,4 +106,5 @@ int main(int argc, char* argv[])
 else cout << "Noting to open! \nExample: ezp_parser <Filename>\n";
  return 0;
 }
+
 
