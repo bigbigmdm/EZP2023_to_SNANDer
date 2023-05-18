@@ -10,3 +10,5 @@ and prints it in the SNANDer format:
 
 You can print in the terminal `./ezp_parser <Dat file name>` and copy some needed lines with chip data into the file `spi_nor_flash.c` in SNANDer project.
 in the SNANDer project.
+
+ ![The screenshot](https://github.com/bigbigmdm/EZP2023_to_SNANDer/raw/main/ezp_parser.png)  
