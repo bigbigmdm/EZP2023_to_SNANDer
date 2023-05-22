@@ -10,6 +10,7 @@ int main(int argc, char* argv[])
  ifstream file(argv[1]);
  char buf, man_code, id_code, cap_code, block_size;
  unsigned int blocks;
+ unsigned char obuf;
  char icType[0x10] = "";
  char icManuf[0x10] = "";
  char icName[0x10] = "";
@@ -75,12 +76,13 @@ int main(int argc, char* argv[])
 	 while (i < 0x44)
 	 {
 		file.get(buf);
-		if (i == 0x30) cap_code = buf;
-		if (i == 0x31) id_code = buf;
-		if (i == 0x32) man_code = buf;
-		if (i == 0x36) blocks = abs(buf);
-		if (i == 0x37) blocks = blocks + abs(buf * 256);
-		if (i == 0x39) block_size = buf;
+		obuf = buf;
+		if (i == 0x30) cap_code = obuf;
+		if (i == 0x31) id_code = obuf;
+		if (i == 0x32) man_code = obuf;
+		if (i == 0x36) blocks = obuf;
+		if (i == 0x37) blocks = blocks + obuf * 256);
+		if (i == 0x39) block_size = obuf;
 		i++; 
      }
 	  i = 0;
@@ -106,5 +108,4 @@ int main(int argc, char* argv[])
 else cout << "Noting to open! \nExample: ezp_parser <Filename>\n";
  return 0;
 }
-
 
