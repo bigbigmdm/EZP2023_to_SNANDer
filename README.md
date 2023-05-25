@@ -38,7 +38,7 @@ offset	 Size   Value
 3F        1     0x00
 40        1     ???
 41        1     ???
-42        1     ???
+42        1     EEPROM pages 0x01 - 0x04
 43        1     VCC 00=>3.3V 01=>1.8V 02=>5.0V
 The end record is 0x44 (68) zero bytes.
 ```
