@@ -17,7 +17,7 @@ EZP2019.Dat parsing:
 
 Chip string lenght: 0x44 (68) bytes;
 
-`
+```
 offset	 Size	  Value
 00 -     2F	   30	ASCII Chip type, Name and Manufacture, 0x00 filling
 30 			    1	   NOR FLASH Chip Size code   / 0x00 - other chips
@@ -41,4 +41,4 @@ offset	 Size	  Value
 42			     1	   ???
 43			     1	   VCC 00=>3.3V 01=>1.8V 02=>5.0V
 The end record is 0x44 (68) zero bytes.
-`
+```
