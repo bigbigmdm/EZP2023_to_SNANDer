@@ -23,7 +23,7 @@ offset	 Size   Value
 30        1     NOR FLASH Chip Size code   / 0x00 - other chips
 31        1     NOR FLASH Chip ID Code     / 0x00 - other chips
 32        1     NOR FLASH Manufacture code / 0x00 - other chips
-33	 		          0x00
+33              0x00
 34        4     Chip Size
 35 	
 36 	  
