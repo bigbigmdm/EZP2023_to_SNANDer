@@ -31,7 +31,7 @@ offset	 Size   Value
 38        2     Block size
 39 
 3A        1     0x00 - NOR FLASH FLAG / 0x01 - 24xxx FLAG / 0x02 - 93xxx FLAG / 0x04 - 95xxx
-3B        1     ???
+3B        1     Algoritm code
 3C        2     Timing parameter:
 3D              3000/1000/500/300/200/100 - NOR FLASH, 4000/2000 - 24xxx, 100 - 93xxx
 3E        1     0x00
