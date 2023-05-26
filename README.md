@@ -31,13 +31,13 @@ offset	 Size   Value
 38        2     Block size
 39 
 3A        1     0x00 - NOR FLASH FLAG / 0x01 - 24xxx FLAG / 0x02 - 93xxx FLAG / 0x04 - 95xxx
-3B        1     Algoritm code
+3B        1     Algoritm code number
 3C        2     Timing parameter:
 3D              3000/1000/500/300/200/100 - NOR FLASH, 4000/2000 - 24xxx, 100 - 93xxx
-3E        1     0x00
+3E        2     Extend 0x00
 3F        1     0x00
-40        1     ???
-41        1     ???
+40        1     EEPROM 0B/2B/4B - 0B - SPI, 2B - 93xxx, 24xxx, 25xxx 
+41        1     0x00
 42        1     EEPROM pages 0x01 - 0x04
 43        1     VCC 00=>3.3V 01=>1.8V 02=>5.0V
 The end record is 0x44 (68) zero bytes.
