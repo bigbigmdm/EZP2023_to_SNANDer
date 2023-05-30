@@ -1,9 +1,9 @@
 # EZP2023_to_SNANDer
 This is the parser of chips data from the EZP2019 - EZP2023 programmer to the SNANDer programmer.
 
-The EZP2019, EZP2020, EZP2022, EZP2023, Minpro I programmers have a big database of chips 
+The EZP2019, EZP2020, EZP2022, EZP2023, Minpro I, XP866+ programmers have a big database of chips 
 stored in the binary file `EZP20xx.Dat` (for example, `EZP2023+.Dat`, `EZP2019.Dat`, etc.)
-or `MinproI.Dat`.
+or `MinproI.Dat` or `XP866+.Dat`.
 This program takes the information about the SERIAL NOR FLASH chips from this file 
 and prints it in the SNANDer format:
 
